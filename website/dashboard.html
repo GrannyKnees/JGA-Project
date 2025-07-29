@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Garden of Growth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Garden of Growth</span>
+            </div>
+            <nav class="main-nav">
+                <a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="soil-types.html"><i class="fas fa-dirt"></i> Soil Types</a>
+                <a href="calculator.html"><i class="fas fa-calculator"></i> Calculator</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+            <div class="user-menu">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="user-avatar">
+                <span>Welcome, User</span>
+                <button class="btn-logout"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="welcome-banner">
+            <h1>Community Gardening Dashboard</h1>
+            <p>Access resources, tools, and information to support your community garden</p>
+        </section>
+
+        <div class="dashboard-grid">
+            <div class="card feature-card">
+                <i class="fas fa-dirt"></i>
+                <h3>Soil Types</h3>
+                <p>Learn about different soil types and how to improve your garden's soil quality.</p>
+                <a href="soil-types.html" class="btn btn-secondary">Explore</a>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fas fa-tint"></i>
+                <h3>Water Calculator</h3>
+                <p>Calculate your garden's water needs and optimize your irrigation.</p>
+                <a href="calculator.html" class="btn btn-secondary">Calculate</a>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Gardening Tips</h3>
+                <p>Discover solutions to common challenges in community gardening.</p>
+                <a href="solutions.html" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Our Team</h3>
+                <p>Meet the people behind the Garden of Growth initiative.</p>
+                <a href="team.html" class="btn btn-secondary">Meet Us</a>
+            </div>
+
+            <div class="card quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html"><i class="fas fa-arrow-right"></i> About Our Project</a></li>
+                    <li><a href="challenges.html"><i class="fas fa-arrow-right"></i> Common Challenges</a></li>
+                    <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="card recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-item">
+                    <i class="fas fa-seedling"></i>
+                    <p>New soil improvement guide added</p>
+                    <span class="activity-date">2 days ago</span>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-tint"></i>
+                    <p>Water calculator updated with new data</p>
+                    <span class="activity-date">1 week ago</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Garden of Growth</h4>
+                <p>Promoting community food security through sustainable gardening practices.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Garden of Growth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

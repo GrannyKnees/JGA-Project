@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Calculator | Garden of Growth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Same header as dashboard.html -->
+    </header>
+
+    <main class="content-page">
+        <div class="page-header">
+            <h1>Water Usage Calculator</h1>
+            <p>Optimize your garden's water consumption with our smart calculator</p>
+        </div>
+
+        <section class="calculator-intro">
+            <p>Proper water management is essential for healthy plants and sustainable gardening. Our calculator helps you estimate your garden's water needs based on several factors.</p>
+        </section>
+
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <h2><i class="fas fa-calculator"></i> Calculate Your Garden's Needs</h2>
+                
+                <div class="form-group">
+                    <label for="gardenSize">Garden Area (square meters)</label>
+                    <input type="number" id="gardenSize" min="1" value="10">
+                </div>
+                
+                <div class="form-group">
+                    <label for="plantType">Primary Plant Type</label>
+                    <select id="plantType">
+                        <option value="1.5">Vegetables (high water need)</option>
+                        <option value="1.0">Fruits (medium water need)</option>
+                        <option value="0.7">Herbs (low water need)</option>
+                        <option value="0.3">Drought-resistant plants</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="climate">Climate Type</label>
+                    <select id="climate">
+                        <option value="1.3">Arid/Dry</option>
+                        <option value="1.1">Temperate</option>
+                        <option value="0.9">Humid</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="irrigation">Irrigation Method</label>
+                    <select id="irrigation">
+                        <option value="1.2">Sprinkler</option>
+                        <option value="1.0">Hose watering</option>
+                        <option value="0.7">Drip irrigation</option>
+                        <option value="0.5">Self-watering system</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="soilType">Soil Type</label>
+                    <select id="soilType">
+                        <option value="1.1">Sandy (drains quickly)</option>
+                        <option value="1.3">Clay (holds water)</option>
+                        <option value="1.0">Loamy (balanced)</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" id="calculateBtn">
+                    <i class="fas fa-calculator"></i> Calculate Water Needs
+                </button>
+            </div>
+            
+            <div class="calculator-result" id="result">
+                <h3><i class="fas fa-tint"></i> Your Water Calculation Results</h3>
+                <div class="result-item">
+                    <h4>Weekly Water Need</h4>
+                    <p id="weeklyResult">-</p>
+                </div>
+                <div class="result-item">
+                    <h4>Monthly Water Need</h4>
+                    <p id="monthlyResult">-</p>
+                </div>
+                <div class="result-item">
+                    <h4>Annual Water Need</h4>
+                    <p id="annualResult">-</p>
+                </div>
+                <div class="water-tips" id="waterTips">
+                    <h4><i class="fas fa-lightbulb"></i> Water Saving Tips</h4>
+                    <ul id="tipsList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="water-saving">
+            <h2>Water Conservation Strategies</h2>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <i class="fas fa-cloud-rain"></i>
+                    <h3>Rainwater Harvesting</h3>
+                    <p>Collect and store rainwater in barrels or tanks for use during dry periods.</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timed Watering</h3>
+                    <p>Water early morning or late evening to reduce evaporation losses.</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Mulching</h3>
+                    <p>Apply 5-10cm of organic mulch to retain soil moisture.</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Drought-Resistant Plants</h3>
+                    <p>Choose native plants adapted to your climate's natural rainfall.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Same footer as dashboard.html -->
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Enhanced calculator functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const calculateBtn = document.getElementById('calculateBtn');
+            
+            calculateBtn.addEventListener('click', function() {
+                // Get input values
+                const gardenSize = parseFloat(document.getElementById('gardenSize').value);
+                const plantType = parseFloat(document.getElementById('plantType').value);
+                const climate = parseFloat(document.getElementById('climate').value);
+                const irrigation = parseFloat(document.getElementById('irrigation').value);
+                const soilType = parseFloat(document.getElementById('soilType').value);
+                
+                // Validate input
+                if (isNaN(gardenSize) {
+                    alert('Please enter a valid garden size');
+                    return;
+                }
+                
+                // Calculate water needs (liters per week)
+                const baseWater = 5; // liters per square meter
+                const weeklyNeed = gardenSize * baseWater * plantType * climate * irrigation * soilType;
+                const monthlyNeed = weeklyNeed * 4;
+                const annualNeed = monthlyNeed * 12;
+                
+                // Display results
+                document.getElementById('weeklyResult').textContent = `${weeklyNeed.toFixed(1)} liters per week`;
+                document.getElementById('monthlyResult').textContent = `${monthlyNeed.toFixed(1)} liters per month`;
+                document.getElementById('annualResult').textContent = `${annualNeed.toFixed(1)} liters per year`;
+                
+                // Generate tips
+                const tipsList = document.getElementById('tipsList');
+                tipsList.innerHTML = '';
+                
+                const tips = [];
+                
+                if (irrigation > 0.9) {
+                    tips.push('Consider switching to drip irrigation to save up to 30% water');
+                }
+                
+                if (climate > 1.1) {
+                    tips.push('Mulch your garden beds to reduce evaporation in dry climates');
+                }
+                
+                if (plantType > 1.2) {
+                    tips.push('Mix in some drought-resistant plants to reduce overall water needs');
+                }
+                
+                if (soilType < 1.0) {
+                    tips.push('Improve your sandy soil with organic matter to increase water retention');
+                }
+                
+                if (tips.length === 0) {
+                    tips.push('Your current setup is already water efficient!');
+                }
+                
+                tips.forEach(tip => {
+                    const li = document.createElement('li');
+                    li.textContent = tip;
+                    tipsList.appendChild(li);
+                });
+                
+                // Show results
+                document.getElementById('result').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,538 @@
+/* Soil Types Page */
+.soil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.soil-card {
+    background-color: var(--text-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.soil-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.soil-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.soil-content {
+    padding: 20px;
+}
+
+.soil-content h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.soil-content p {
+    margin-bottom: 10px;
+}
+
+.soil-content strong {
+    color: var(--primary-dark);
+}
+
+.testing-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.method-card {
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.method-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Challenges Page */
+.challenge-section {
+    margin: 40px 0;
+}
+
+.challenge-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.challenge-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.challenge-content h2 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.challenge-content ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.challenge-content li {
+    margin-bottom: 8px;
+}
+
+/* Solutions Page */
+.solutions-tabs {
+    margin: 40px 0;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    background-color: var(--gray-light);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.tab-content {
+    display: none;
+    padding: 30px;
+    background-color: var(--text-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.solution-card {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.solution-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.case-study {
+    background-color: var(--text-light);
+    padding: 40px;
+    border-radius: 12px;
+    margin: 40px 0;
+    box-shadow: var(--shadow);
+}
+
+.case-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.case-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Calculator Page */
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.calculator-form {
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.calculator-form h2 {
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.calculator-result {
+    background-color: var(--primary-light);
+    padding: 30px;
+    border-radius: 12px;
+    color: var(--text-light);
+    box-shadow: var(--shadow);
+    align-self: start;
+}
+
+.result-item {
+    margin-bottom: 25px;
+}
+
+.result-item h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.water-tips {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.water-tips h4 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.water-tips ul {
+    list-style: none;
+}
+
+.water-tips li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.water-tips li::before {
+    content: '•';
+    position: absolute;
+    left: 10px;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.strategy-card {
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.strategy-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Team Page */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.team-member {
+    background-color: var(--text-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.role {
+    display: inline-block;
+    background-color: var(--light-color);
+    color: var(--primary-dark);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.id {
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.bio {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.member-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.member-contact a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.member-contact a:hover {
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.value-card {
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.value-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+/* Contact Page */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.contact-form {
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form h2 {
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 150px;
+    transition: var(--transition);
+}
+
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.contact-info {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.info-item h3 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.faq-section {
+    margin: 60px 0;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--text-light);
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question i {
+    transition: var(--transition);
+}
+
+.faq-answer {
+    background-color: var(--light-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-answer p {
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .calculator-container, .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .challenge-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tab-buttons {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+    }
+}
