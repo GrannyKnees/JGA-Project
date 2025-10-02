@@ -537,6 +537,173 @@ a:hover {
     gap: 20px;
 }
 
+/* Soil Types Page Styles */
+.soil-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--gray-dark);
+}
+
+.soil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.soil-card {
+    background-color: var(--text-light);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 1px solid var(--gray-medium);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.soil-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.soil-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.soil-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.soil-card:hover .soil-image img {
+    transform: scale(1.05);
+}
+
+.soil-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;
+}
+
+.soil-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 3px;
+    font-weight: 700;
+}
+
+.soil-content p {
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.soil-content p strong {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.soil-content .btn {
+    margin-top: auto;
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    transition: var(--transition);
+}
+
+.soil-content .btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.soil-testing {
+    background-color: var(--light-color);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.soil-testing h2 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.soil-testing > p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--gray-dark);
+}
+
+.testing-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.method-card {
+    background-color: var(--text-light);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border: 1px solid var(--gray-medium);
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-color);
+}
+
+.method-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    background-color: var(--light-color);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.method-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.method-card p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .header-content {
@@ -556,6 +723,20 @@ a:hover {
     
     .section-image {
         order: -1;
+    }
+    
+    .soil-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    
+    .soil-testing {
+        padding: 30px 25px;
+    }
+    
+    .testing-methods {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
