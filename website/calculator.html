@@ -27,7 +27,6 @@
                 <button class="btn-logout"><i class="fas fa-sign-out-alt"></i></button>
             </div>
         </div>
-        <!-- Same header as dashboard.html -->
     </header>
 
     <main class="content-page">
@@ -40,78 +39,36 @@
             <p>Proper water management is essential for healthy plants and sustainable gardening. Our calculator helps you estimate your garden's water needs based on several factors.</p>
         </section>
 
-        <div class="calculator-container">
-            <div class="calculator-form">
-                <h2><i class="fas fa-calculator"></i> Calculate Your Garden's Needs</h2>
-                
-                <div class="form-group">
-                    <label for="gardenSize">Garden Area (square meters)</label>
-                    <input type="number" id="gardenSize" min="1" value="10">
-                </div>
-                
-                <div class="form-group">
-                    <label for="plantType">Primary Plant Type</label>
-                    <select id="plantType">
-                        <option value="1.5">Vegetables (high water need)</option>
-                        <option value="1.0">Fruits (medium water need)</option>
-                        <option value="0.7">Herbs (low water need)</option>
-                        <option value="0.3">Drought-resistant plants</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="climate">Climate Type</label>
-                    <select id="climate">
-                        <option value="1.3">Arid/Dry</option>
-                        <option value="1.1">Temperate</option>
-                        <option value="0.9">Humid</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="irrigation">Irrigation Method</label>
-                    <select id="irrigation">
-                        <option value="1.2">Sprinkler</option>
-                        <option value="1.0">Hose watering</option>
-                        <option value="0.7">Drip irrigation</option>
-                        <option value="0.5">Self-watering system</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="soilType">Soil Type</label>
-                    <select id="soilType">
-                        <option value="1.1">Sandy (drains quickly)</option>
-                        <option value="1.3">Clay (holds water)</option>
-                        <option value="1.0">Loamy (balanced)</option>
-                    </select>
-                </div>
-                
-                <button class="btn btn-primary" id="calculateBtn">
-                    <i class="fas fa-calculator"></i> Calculate Water Needs
-                </button>
-            </div>
-            
-            <div class="calculator-result" id="result">
-                <h3><i class="fas fa-tint"></i> Your Water Calculation Results</h3>
-                <div class="result-item">
-                    <h4>Weekly Water Need</h4>
-                    <p id="weeklyResult">-</p>
-                </div>
-                <div class="result-item">
-                    <h4>Monthly Water Need</h4>
-                    <p id="monthlyResult">-</p>
-                </div>
-                <div class="result-item">
-                    <h4>Annual Water Need</h4>
-                    <p id="annualResult">-</p>
-                </div>
-                <div class="water-tips" id="waterTips">
-                    <h4><i class="fas fa-lightbulb"></i> Water Saving Tips</h4>
-                    <ul id="tipsList"></ul>
-                </div>
-            </div>
+        <!-- ...existing code... -->
+<div class="calculator-container">
+    <form class="calculator-form">
+        <div>
+            <label for="gardenSize">Garden Size (m²)</label>
+            <input type="number" id="gardenSize" min="1" placeholder="Enter size in square meters">
         </div>
+        <div>
+            <label for="soilType">Soil Type</label>
+            <select id="soilType">
+                <option value="">Select soil type</option>
+                <option value="sandy">Sandy</option>
+                <option value="loamy">Loamy</option>
+                <option value="clay">Clay</option>
+            </select>
+        </div>
+        <div>
+            <label for="plantType">Plant Type</label>
+            <select id="plantType">
+                <option value="">Select plant type</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="flowers">Flowers</option>
+                <option value="herbs">Herbs</option>
+            </select>
+        </div>
+        <button type="button" id="calculateBtn">Calculate Water Usage</button>
+    </form>
+    <div class="calculator-result" id="result"></div>
+</div>
+<!-- ...existing code... -->
 
         <section class="water-saving">
             <h2>Water Conservation Strategies</h2>
