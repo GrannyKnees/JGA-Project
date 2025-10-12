@@ -15,10 +15,10 @@
                 <span>Garden of Growth</span>
             </div>
             <nav class="main-nav">
-                <a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
                 <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
                 <a href="soil-types.html"><i class="fas fa-dirt"></i> Soil Types</a>
-                <a href="calculator.html"><i class="fas fa-calculator"></i> Calculator</a>
+                <a href="calculator.html" class="active"><i class="fas fa-calculator"></i> Calculator</a>
                 <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
             </nav>
             <div class="user-menu">
@@ -184,7 +184,7 @@
                 const soilType = parseFloat(document.getElementById('soilType').value);
                 
                 // Validate input
-                if (isNaN(gardenSize) {
+                if (isNaN(gardenSize)) {
                     alert('Please enter a valid garden size');
                     return;
                 }
