@@ -128,7 +128,7 @@ function calculateWaterNeeds() {
     const climate = parseFloat(document.getElementById('climate').value);
     const irrigation = parseFloat(document.getElementById('irrigation').value);
     
-    if (isNaN(gardenSize) {
+    if (isNaN(gardenSize)) {
         alert('Please enter a valid garden size');
         return;
     }
