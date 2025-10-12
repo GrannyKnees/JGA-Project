@@ -157,36 +157,3 @@ function calculateWaterNeeds() {
     
     document.getElementById('result').style.display = 'block';
 }
-
-document.getElementById('calculateBtn').addEventListener('click', function() {
-    // Get input values
-    const gardenSize = parseFloat(document.getElementById('gardenSize').value);
-    const soilType = document.getElementById('soilType').value;
-    const plantType = document.getElementById('plantType').value;
-
-    // Simple multipliers for demonstration
-    let soilMultiplier = 1;
-    if (soilType === 'sandy') soilMultiplier = 1.2;
-    if (soilType === 'loamy') soilMultiplier = 1.0;
-    if (soilType === 'clay') soilMultiplier = 0.8;
-
-    let plantMultiplier = 1;
-    if (plantType === 'vegetables') plantMultiplier = 1.3;
-    if (plantType === 'flowers') plantMultiplier = 1.1;
-    if (plantType === 'herbs') plantMultiplier = 0.9;
-
-    // Validate input
-    if (isNaN(gardenSize) || !soilType || !plantType) {
-        document.getElementById('result').textContent = 'Please fill in all fields correctly.';
-        document.getElementById('result').style.display = 'block';
-        return;
-    }
-
-    // Calculate water usage (example formula)
-    const baseWater = 5; // liters per m² per week
-    const weeklyUsage = gardenSize * baseWater * soilMultiplier * plantMultiplier;
-
-    // Display result
-    document.getElementById('result').textContent = `Estimated water usage: ${weeklyUsage.toFixed(1)} liters per week.`;
-    document.getElementById('result').style.display = 'block';
-});
