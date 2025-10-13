@@ -27,7 +27,6 @@
                 <button class="btn-logout"><i class="fas fa-sign-out-alt"></i></button>
             </div>
         </div>
-        <!-- Same header as dashboard.html -->
     </header>
 
     <main class="content-page">
@@ -40,7 +39,6 @@
             <p>Proper water management is essential for healthy plants and sustainable gardening. Our calculator helps you estimate your garden's water needs based on several factors.</p>
         </section>
 
-        <!-- ...existing code... -->
 <div class="calculator-container">
     <form class="calculator-form">
         <div>
@@ -69,8 +67,6 @@
     </form>
     <div class="calculator-result" id="result"></div>
 </div>
-<!-- ...existing code... -->
-
         <section class="water-saving">
             <h2>Water Conservation Strategies</h2>
             <div class="strategy-grid">
@@ -124,76 +120,8 @@
         <div class="footer-bottom">
             <p>&copy; 2023 Garden of Growth. All rights reserved.</p>
         </div>
-        <!-- Same footer as dashboard.html -->
     </footer>
 
     <script src="scripts.js"></script>
-    <script>
-        // Enhanced calculator functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const calculateBtn = document.getElementById('calculateBtn');
-            
-            calculateBtn.addEventListener('click', function() {
-                // Get input values
-                const gardenSize = parseFloat(document.getElementById('gardenSize').value);
-                const plantType = parseFloat(document.getElementById('plantType').value);
-                const climate = parseFloat(document.getElementById('climate').value);
-                const irrigation = parseFloat(document.getElementById('irrigation').value);
-                const soilType = parseFloat(document.getElementById('soilType').value);
-                
-                // Validate input
-                if (isNaN(gardenSize)) {
-                    alert('Please enter a valid garden size');
-                    return;
-                }
-                
-                // Calculate water needs (liters per week)
-                const baseWater = 5; // liters per square meter
-                const weeklyNeed = gardenSize * baseWater * plantType * climate * irrigation * soilType;
-                const monthlyNeed = weeklyNeed * 4;
-                const annualNeed = monthlyNeed * 12;
-                
-                // Display results
-                document.getElementById('weeklyResult').textContent = `${weeklyNeed.toFixed(1)} liters per week`;
-                document.getElementById('monthlyResult').textContent = `${monthlyNeed.toFixed(1)} liters per month`;
-                document.getElementById('annualResult').textContent = `${annualNeed.toFixed(1)} liters per year`;
-                
-                // Generate tips
-                const tipsList = document.getElementById('tipsList');
-                tipsList.innerHTML = '';
-                
-                const tips = [];
-                
-                if (irrigation > 0.9) {
-                    tips.push('Consider switching to drip irrigation to save up to 30% water');
-                }
-                
-                if (climate > 1.1) {
-                    tips.push('Mulch your garden beds to reduce evaporation in dry climates');
-                }
-                
-                if (plantType > 1.2) {
-                    tips.push('Mix in some drought-resistant plants to reduce overall water needs');
-                }
-                
-                if (soilType < 1.0) {
-                    tips.push('Improve your sandy soil with organic matter to increase water retention');
-                }
-                
-                if (tips.length === 0) {
-                    tips.push('Your current setup is already water efficient!');
-                }
-                
-                tips.forEach(tip => {
-                    const li = document.createElement('li');
-                    li.textContent = tip;
-                    tipsList.appendChild(li);
-                });
-                
-                // Show results
-                document.getElementById('result').style.display = 'block';
-            });
-        });
-    </script>
 </body>
 </html>

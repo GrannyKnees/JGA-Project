@@ -189,4 +189,4 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
     // Display result
     document.getElementById('result').textContent = `Estimated water usage: ${weeklyUsage.toFixed(1)} liters per week.`;
     document.getElementById('result').style.display = 'block';
-});
+})
