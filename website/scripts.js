@@ -190,13 +190,3 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
     document.getElementById('result').textContent = `Estimated water usage: ${weeklyUsage.toFixed(1)} liters per week.`;
     document.getElementById('result').style.display = 'block';
 });
-
-document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-                const tabId = this.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });

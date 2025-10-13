@@ -965,177 +965,345 @@ a:hover {
 
 /*Solutions Page Styles*/
 .solutions-tabs {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 18px rgba(76,175,80,0.08);
-            padding: 40px 32px;
-            margin-bottom: 40px;
-        }
-        .tab-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            margin-bottom: 32px;
-        }
-        .tab-btn {
-            background: #f1f8e9;
-            color: #388e3c;
-            border: none;
-            border-radius: 8px 8px 0 0;
-            padding: 16px 32px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-            box-shadow: 0 2px 8px rgba(76,175,80,0.06);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .tab-btn.active, .tab-btn:hover {
-            background: #388e3c;
-            color: #fff;
-        }
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(16px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-            margin-top: 24px;
-            margin-bottom: 24px;
-        }
-        .solution-card {
-            background: #f7faf7;
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(76,175,80,0.06);
-            padding: 32px 20px;
-            text-align: left;
-            transition: box-shadow 0.2s, transform 0.2s;
-            border: 1px solid #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            height: 100%;
-        }
-        .solution-card:hover {
-            box-shadow: 0 8px 32px rgba(76,175,80,0.14);
-            border-color: #4CAF50;
-            transform: translateY(-6px) scale(1.03);
-        }
-        .solution-card i {
-            font-size: 32px;
-            color: #4CAF50;
-            margin-bottom: 16px;
-        }
-        .solution-card h3 {
-            font-size: 20px;
-            color: #388e3c;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        .solution-card p {
-            font-size: 16px;
-            color: #444;
-            margin-bottom: 0;
-        }
-        @media (max-width: 1200px) {
-            .solution-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
-        }
-        @media (max-width: 700px) {
-            .solution-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-            .solutions-tabs {
-                padding: 16px 8px;
-            }
-        }
-        .case-study {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 18px rgba(76,175,80,0.08);
-            padding: 40px 32px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-        .case-study h2 {
-            font-size: 28px;
-            color: #2e7d32;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        .case-content {
-            display: flex;
-            gap: 32px;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-        .case-text {
-            flex: 2;
-            font-size: 18px;
-            color: #444;
-        }
-        .case-text ul {
-            margin: 16px 0;
-            padding-left: 24px;
-        }
-        .case-image {
-            flex: 1;
-            min-width: 260px;
-            max-width: 340px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .case-image img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(76,175,80,0.10);
-        }
-        @media (max-width: 900px) {
-            .case-content {
-                flex-direction: column;
-                gap: 16px;
-            }
-            .case-image {
-                max-width: 100%;
-                min-width: 0;
-            }
-        }
-        .page-header h1 {
-            font-size: 36px;
-            color: #388e3c;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        .page-header p {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        .solutions-intro p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 32px;
-            text-align: center;
-        }
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(76,175,80,0.08);
+    padding: 32px 24px;
+    margin-bottom: 40px;
+}
 
-/*Contact Page Styles*/
+.tab-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.tab-btn {
+    background: #f1f8e9;
+    color: #388e3c;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.06);
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: #388e3c;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.solution-card {
+    background: #f7faf7;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(76,175,80,0.06);
+    padding: 24px 16px;
+    text-align: left;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.solution-card:hover {
+    box-shadow: 0 8px 32px rgba(76,175,80,0.14);
+    border-color: #4CAF50;
+    transform: translateY(-6px) scale(1.03);
+}
+
+.solution-card h3 {
+    font-size: 20px;
+    color: #388e3c;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.solution-card p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 0;
+}
+
+/* Responsive grid */
+@media (max-width: 1200px) {
+    .solution-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+@media (max-width: 700px) {
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .solutions-tabs {
+        padding: 16px 8px;
+    }
+}
+
+.case-study {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(76,175,80,0.08);
+    padding: 32px 24px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.case-study h2 {
+    font-size: 28px;
+    color: #2e7d32;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.case-content {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.case-text {
+    flex: 2;
+    font-size: 18px;
+    color: #444;
+}
+
+.case-text ul {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.case-image {
+    flex: 1;
+    min-width: 260px;
+    max-width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(76,175,80,0.10);
+}
+
+/* Responsive case study */
+@media (max-width: 900px) {
+    .case-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .case-image {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+.content-page {
+    background: #f7faf7;
+    padding: 32px 0;
+    min-height: 100vh;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    color: #388e3c;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.page-header p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.solutions-intro p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/*Calculator Page*/
+.calculator-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(76,175,80,0.08);
+    padding: 40px 32px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.calculator-form label {
+    font-weight: 600;
+    color: #388e3c;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.calculator-form input,
+.calculator-form select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    margin-bottom: 8px;
+}
+
+.calculator-form input:focus,
+.calculator-form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#calculateBtn {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 12px;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+}
+
+#calculateBtn:hover {
+    background: #388e3c;
+    transform: translateY(-2px);
+}
+
+.calculator-result {
+    width: 100%;
+    background: #f1f8e9;
+    border-radius: 12px;
+    padding: 24px;
+    color: #2E7D32;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 16px;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.06);
+    display: none;
+}
+
+.water-saving {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(76,175,80,0.08);
+    padding: 40px 32px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.water-saving h2 {
+    color: #388e3c;
+    font-size: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.strategy-card {
+    background: #f7faf7;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(76,175,80,0.06);
+    padding: 24px 16px;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid #e0e0e0;
+}
+
+.strategy-card:hover {
+    box-shadow: 0 8px 32px rgba(76,175,80,0.14);
+    border-color: #4CAF50;
+    transform: translateY(-6px) scale(1.03);
+}
+
+.strategy-card i {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 12px;
+}
+
+.strategy-card h3 {
+    font-size: 18px;
+    color: #388e3c;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.strategy-card p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .calculator-container,
+    .water-saving {
+        padding: 16px 8px;
+    }
+    .strategy-grid {
+        gap: 16px;
+    }
+}
+
+/*Contact Page*/
 .contact-container {
     display: flex;
     gap: 40px;
@@ -1335,150 +1503,4 @@ a:hover {
     color: #555;
     margin-bottom: 24px;
     text-align: center;
-}
-
-/*Calculator Page Styles*/
-.calculator-container {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(76,175,80,0.08);
-    padding: 40px 32px;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.calculator-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-.calculator-form label {
-    font-weight: 600;
-    color: #388e3c;
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-
-.calculator-form input,
-.calculator-form select {
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    font-size: 16px;
-    transition: border-color 0.2s;
-    margin-bottom: 8px;
-}
-
-.calculator-form input:focus,
-.calculator-form select:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-
-#calculateBtn {
-    background: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 16px 0;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    margin-top: 12px;
-    box-shadow: 0 2px 8px rgba(76,175,80,0.10);
-}
-
-#calculateBtn:hover {
-    background: #388e3c;
-    transform: translateY(-2px);
-}
-
-.calculator-result {
-    width: 100%;
-    background: #f1f8e9;
-    border-radius: 12px;
-    padding: 24px;
-    color: #2E7D32;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 16px;
-    box-shadow: 0 2px 8px rgba(76,175,80,0.06);
-    display: none;
-}
-
-.water-saving {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(76,175,80,0.08);
-    padding: 40px 32px;
-    margin: 40px auto;
-    max-width: 900px;
-}
-
-.water-saving h2 {
-    color: #388e3c;
-    font-size: 28px;
-    margin-bottom: 24px;
-    text-align: center;
-}
-
-.strategy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 32px;
-    margin-top: 24px;
-}
-
-.strategy-card {
-    background: #f7faf7;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(76,175,80,0.06);
-    padding: 24px 16px;
-    text-align: center;
-    transition: box-shadow 0.2s, transform 0.2s;
-    border: 1px solid #e0e0e0;
-}
-
-.strategy-card:hover {
-    box-shadow: 0 8px 32px rgba(76,175,80,0.14);
-    border-color: #4CAF50;
-    transform: translateY(-6px) scale(1.03);
-}
-
-.strategy-card i {
-    font-size: 32px;
-    color: #4CAF50;
-    margin-bottom: 12px;
-}
-
-.strategy-card h3 {
-    font-size: 18px;
-    color: #388e3c;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.strategy-card p {
-    font-size: 15px;
-    color: #444;
-    margin-bottom: 0;
-}
-
-@media (max-width: 700px) {
-    .calculator-container,
-    .water-saving {
-        padding: 16px 8px;
-    }
-    .strategy-grid {
-        gap: 16px;
-    }
 }
