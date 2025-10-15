@@ -972,6 +972,132 @@ a:hover {
     margin-bottom: 40px;
 }
 
+/* Challenges Page Styles */
+
+.challenge-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 40px auto 32px auto;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.challenge-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(76,175,80,0.08);
+    display: flex;
+    gap: 24px;
+    padding: 32px 24px;
+    align-items: flex-start;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid #e0e0e0;
+    min-height: 320px;
+}
+
+.challenge-card:hover {
+    box-shadow: 0 8px 32px rgba(76,175,80,0.14);
+    border-color: #4CAF50;
+    transform: translateY(-6px) scale(1.03);
+}
+
+.challenge-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: #f1f8e9;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+    margin-right: 8px;
+}
+
+.challenge-icon i {
+    font-size: 32px;
+    color: #4CAF50;
+}
+
+.challenge-content h2 {
+    font-size: 22px;
+    color: #388e3c;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.challenge-content p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.challenge-content ul {
+    margin-bottom: 8px;
+    padding-left: 20px;
+}
+
+.challenge-content ul li {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #f1f8e9;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(76,175,80,0.06);
+    padding: 40px 32px;
+    text-align: center;
+    margin: 32px auto 0 auto;
+    max-width: 700px;
+}
+
+.cta-section h2 {
+    font-size: 28px;
+    color: #388e3c;
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.cta-section .btn-primary {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+}
+
+.cta-section .btn-primary:hover {
+    background: #388e3c;
+    transform: translateY(-2px);
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .challenge-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 8px;
+    }
+    .challenge-card {
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 0;
+    }
+}
 .tab-buttons {
     display: flex;
     gap: 16px;
